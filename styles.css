@@ -1,0 +1,340 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Krona One', sans-serif;
+}
+
+p {
+    font-family: 'Livvic', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+
+.nav-menu {
+    background-color: #fff; 
+    color: #333;
+    padding: 30px 80px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: small;
+    font-family: 'Livvic', sans-serif; 
+}
+
+#curriculum-button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #3040C4;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+#curriculum-button:hover {
+    background-color: #fff;
+    border: #3040C4;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #3040C4;
+    transform: translateY(-7px);
+}
+
+#curriculum-button:active {
+    transform: translateY(-1px);
+}
+
+/* Estilos para la sección de Portfolio */
+.portfolio-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: url('fotos/Fondo-1.png') no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed; /* Efecto parallax */
+}
+
+.portfolio-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black; 
+}
+
+.portfolio-title {
+    margin: 0;
+    font-size: 70px;
+    display: inline-block;
+}
+
+/* Estilos para la animación de letras individuales */
+.portfolio-title span {
+    display: inline-block;
+    color: black; 
+    animation: saltarLetra 0.6s ease forwards;
+}
+
+/* Ajustes para cada letra con nth-child */
+.portfolio-title span:nth-child(1) { animation-delay: 0.1s; }
+.portfolio-title span:nth-child(2) { animation-delay: 0.2s; }
+.portfolio-title span:nth-child(3) { animation-delay: 0.3s; }
+.portfolio-title span:nth-child(4) { animation-delay: 0.4s; }
+.portfolio-title span:nth-child(5) { animation-delay: 0.5s; }
+.portfolio-title span:nth-child(6) { animation-delay: 0.6s; }
+.portfolio-title span:nth-child(7) { animation-delay: 0.7s; }
+.portfolio-title span:nth-child(8) { animation-delay: 0.8s; }
+.portfolio-title span:nth-child(9) { animation-delay: 0.9s; }
+
+/* Animación moderna para "Portfolio" */
+@keyframes saltarLetra {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-15px); /* Salto hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Volver a la posición original */
+    }
+}
+
+/* Animación de entrada desde abajo */
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nueva sección de texto centrado */
+.seccion-centrada {
+    text-align: center;
+    padding: 50px 20px; 
+    background-color: #f9f9f9; 
+}
+
+.texto-centrado {
+    font-family: 'Livvic', sans-serif;
+    font-size: 24px; 
+    color: #333; 
+    margin: 0;
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+
+/* Otros estilos */
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.subtitulo {
+    font-size: 0.8em;
+    margin-top: 0;
+    color: black; 
+    animation: aparecerDesdeAbajo 1s ease forwards;
+}
+
+.seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    height: 70vh; /* Altura de la sección */
+    background: url('fotos/Fondo-2.png') no-repeat center center; 
+    background-size: cover; 
+    position: relative; 
+    z-index: 1;
+}
+
+/* Estilo para la sección de Diseño y Maquetado Web */
+.seccion-diseno-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding: 50px 20px; 
+    height: 70vh;
+    background: url('fotos/Fondo-3.png') no-repeat center center; 
+    background-size: cover;
+    position: relative; 
+    z-index: 1; 
+}
+
+.seccion-trabajos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding: 50px 20px;
+    height: 70vh; 
+    background: url('fotos/Fondo-3.png') no-repeat center center; 
+    background-size: cover; 
+    position: relative; 
+    z-index: 1; 
+}
+
+/* Fondo de superposición para mejorar la legibilidad del texto */
+.seccion-diseno-web::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+}
+
+/* Estilo para el contenedor de texto en la sección de Diseño y Maquetado Web */
+.texto-seccion {
+    font-family: 'Livvic', sans-serif; 
+    font-size: 28px; 
+    line-height: 1.5; 
+    max-width: 800px; 
+    padding: 20px;
+    animation: aparecerDesdeAbajo 1.5s ease forwards; /* Animación de entrada desde abajo */
+}
+
+.contenido {
+    flex: 1;
+    text-align: start;
+    margin: 60px;
+}
+
+.contenido-curri  {
+    flex: 1;
+    text-align: start;
+    margin: 60px;
+    width: 50%;
+}
+
+.imagen {
+   
+    width: 50%;
+}
+
+/**************************VIDEO*************/ 
+
+.imagen video {
+    width: 60%; /* Ajusta el video al ancho del contenedor */
+    height: 100%; /* Ajusta el video al alto del contenedor */
+    object-fit: cover; /* Para cubrir todo el contenedor */
+    box-shadow: 7px 12px 23px -10px rgba(69,69,69,1);
+    border-radius: 5px;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 40%;
+}
+
+.boxvideo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+}
+
+.video {
+    width: 50%; /* Cada video ocupa la mitad del contenedor */
+    height: 100%; /* Ocupa el 100% de la altura del contenedor */
+}
+
+.video-left {
+    width: 100%;
+    height: auto; /* Altura automática para mantener la proporción del video */
+}
+
+.video-right {
+    width: 100%;
+    height: auto; /* Altura automática para mantener la proporción del video */
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/**************************iconos*************/ 
+.icon-container {
+    display: flex;
+    width: 80%;
+}
+
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #3040C4; 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+}   
+
+.icon-box i {
+    font-size: 28px; 
+    color: white; 
+}
+  /* Efecto hover */
+  .icon-box:hover {
+    transform: translateY(-5px); /* Mover hacia arriba 5px */
+}
+
+/* Animación de entrada desde abajo */
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
